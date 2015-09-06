@@ -32,7 +32,9 @@ public class B0bCraft {
 	public void init(FMLInitializationEvent event) {
 		
 			ConfigHandler.initConfiguration(event);
-			FMLLog.info("Jet fuel can't melt steel beams");
+			FMLLog.info("Jet fuel can't melt steel beams.");
+			FMLLog.info("The moon landing was faked.");
+
 			
 			BRenderers.add();
 			BTiles.add();
