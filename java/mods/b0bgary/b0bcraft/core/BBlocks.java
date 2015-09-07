@@ -16,8 +16,18 @@ public class BBlocks {
 		
 	public static Block blockCropCotton;
 	public static Block blockCropFlax;
+	public static Block blockCropHemp;
+	public static Block blockCropHops;
+	public static Block blockCropBarley;
+	public static Block blockCropWeed;
+	public static Block blockCropCoca;
+	public static Block blockCropSassafras;
+	public static Block blockCropErgot;
+	public static Block blockCropRye;
+	public static Block blockCropRice;
+	public static Block blockCropBeetroot;
 
-	
+	//root plants should not be picked on right-click
 	
 	public static void add(){
 		
@@ -32,6 +42,39 @@ public class BBlocks {
 		
 		blockCropCotton=new BlockBCrop("blockCropCotton", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
 		GameRegistry.registerBlock(blockCropCotton, "blockCropCotton");
+		
+		blockCropHemp=new BlockBCrop("blockCropHemp", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropHemp, "blockCropHemp");
+		
+		blockCropHops=new BlockBCrop("blockCropHops", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropHops, "blockCropHops");
+		
+		blockCropBarley=new BlockBCrop("blockCropBarley", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropBarley, "blockCropBarley");
+	
+		blockCropWeed=new BlockBCrop("blockCropWeed", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropWeed, "blockCropWeed");
+		
+		blockCropCoca=new BlockBCrop("blockCropCoca", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropCoca, "blockCropCoca");
+		
+		blockCropSassafras=new BlockBCrop("blockCropSassafras", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropSassafras, "blockCropSassafras");
+		
+		blockCropErgot=new BlockBCrop("blockCropErgot", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropErgot, "blockCropErgot");
+		
+		blockCropRye=new BlockBCrop("blockCropRye", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropRye, "blockCropRye");
+		
+		blockCropRice=new BlockBCrop("blockCropRice", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropRice, "blockCropRice");
+		
+		blockCropBeetroot=new BlockBCrop("blockCropBeetroot", new ItemStack(Items.apple),new ItemStack(Items.dye,1,1)).setCreativeTab(B0bCraft.test);
+		GameRegistry.registerBlock(blockCropBeetroot, "blockCropBeetroot");
+		
+	
+	
 	}
 
 }
