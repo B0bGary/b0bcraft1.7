@@ -41,6 +41,7 @@ public class B0bCraft {
 			BBlocks.add();
 			BItems.add();
 			Recipes.add();
+			EventHandlers.add();
 			
     }
     
