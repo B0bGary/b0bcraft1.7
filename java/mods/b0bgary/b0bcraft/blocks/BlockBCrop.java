@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -32,6 +33,7 @@ public class BlockBCrop extends BlockBush implements IGrowable{
 	        setBlockTextureName(References.modid+":"+name+"/"+name+"_");	    
 	        setBlockName(References.modid+":"+name);
 	        this.drop=drop.getItem();
+	        this.dropStack=drop;
 	        this.dropM=drop.getItemDamage();
 	        this.seed=seed.getItem();
 	        this.seedM=seed.getItemDamage();
@@ -41,6 +43,7 @@ public class BlockBCrop extends BlockBush implements IGrowable{
 	    public int dropM;
 	    public Item seed;
 	    public int seedM;
+	    public ItemStack dropStack;
 
 	    protected int maxGrowthStage = 15;
 	    @SideOnly(Side.CLIENT)
@@ -139,6 +142,22 @@ public class BlockBCrop extends BlockBush implements IGrowable{
 	        return this.drop;
 	    }
 	    
+	    @Override
+	    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+	    {
+	    	System.out.println("fsfsdagdzxhbd");
+	        if(this.maxGrowthStage==world.getBlockMetadata(x,y,z)){
+	        	world.setBlockMetadataWithNotify(parX, parY, parZ, 5, 2);
+	        	ArrayList<ItemStack> drops = this.dropStack;
+                for (ItemStack drop : drops) {
+                    if(drop==null || drop.getItem()==null) {
+                        continue;
+                    }
+                    this.dropBlockAsItem(world, x, y, z, drop);
+	        	
+	        }
+	    }
+	    }
 	    
 	    
 	    
